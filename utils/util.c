@@ -10,11 +10,3 @@ void trimstr(char *str) {
     while (*p && isspace(*p)) p++, l--;
     memmove(str, p, l + 1);
 }
-
-void trimcntrl(char *str) {
-    char *p = str;
-    int l = strlen(p);
-    while (iscntrl(p[l - 1])) p[l--] = 0;
-    while (*p && iscntrl(*p)) p++, l--;
-    memmove(str, p, l + 1);
-}
